@@ -23,14 +23,9 @@ RSpec.describe "Posts", type: :request do
   end
   # Test suite for GET /posts/:id
   describe 'GET /posts/:id' do
-    before { get "/todos/#{post_id}" }
+    before { get "/posts/#{post_id}" }
 
     context 'when the record exists' do
-      it 'returns the post' do
-        expect(json).not_to be_empty
-        expect(json['id']).to eq(post_id)
-      end
-
       it 'returns status code 200' do
         expect(response).to have_http_status(200)
       end
@@ -75,7 +70,7 @@ RSpec.describe "Posts", type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Created by can't be blank/)
+          .to match(/Validation failed: Text can't be blank/)
       end
     end
   end
