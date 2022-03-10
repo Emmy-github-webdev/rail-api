@@ -7,6 +7,7 @@ ruby "3.1.0"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+gem 'jwt'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
