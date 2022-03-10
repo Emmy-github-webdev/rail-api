@@ -4835,3 +4835,525 @@ Processing by PostsController#destroy as HTML
 Completed 204 No Content in 15ms (ActiveRecord: 4.8ms | Allocations: 448)
   [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.5ms)[0m  [1m[34m            SELECT schemaname || '.' || tablename
+            FROM pg_tables
+            WHERE
+              tablename !~ '_prt_' AND
+              tablename <> 'schema_migrations'
+  AND tablename <> 'ar_internal_metadata'
+ AND
+              schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (2.7ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'rail_api_test'[0m
+  [1m[35m (68.5ms)[0m  [1m[35mTRUNCATE TABLE "posts", "users" RESTART IDENTITY RESTRICT;[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ipsam"], ["text", "officia"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.886571"], ["updated_at", "2022-03-10 18:16:20.886571"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "est"], ["text", "eius"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.895117"], ["updated_at", "2022-03-10 18:16:20.895117"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "atque"], ["text", "nostrum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.901176"], ["updated_at", "2022-03-10 18:16:20.901176"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "incidunt"], ["text", "fuga"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.910428"], ["updated_at", "2022-03-10 18:16:20.910428"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "rerum"], ["text", "ut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.916133"], ["updated_at", "2022-03-10 18:16:20.916133"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "cumque"], ["text", "dolor"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.922451"], ["updated_at", "2022-03-10 18:16:20.922451"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptas"], ["text", "quo"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.928486"], ["updated_at", "2022-03-10 18:16:20.928486"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "provident"], ["text", "dolorem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.934827"], ["updated_at", "2022-03-10 18:16:20.934827"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nostrum"], ["text", "nihil"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.940462"], ["updated_at", "2022-03-10 18:16:20.940462"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et"], ["text", "eos"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:20.946514"], ["updated_at", "2022-03-10 18:16:20.946514"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/posts" for 127.0.0.1 at 2022-03-10 19:16:20 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 42ms (Views: 7.6ms | ActiveRecord: 1.0ms | Allocations: 15473)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "eum"], ["text", "amet"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.058145"], ["updated_at", "2022-03-10 18:16:21.058145"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nobis"], ["text", "necessitatibus"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.065053"], ["updated_at", "2022-03-10 18:16:21.065053"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "consequatur"], ["text", "a"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.071684"], ["updated_at", "2022-03-10 18:16:21.071684"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quidem"], ["text", "optio"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.077876"], ["updated_at", "2022-03-10 18:16:21.077876"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "unde"], ["text", "distinctio"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.087114"], ["updated_at", "2022-03-10 18:16:21.087114"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "veritatis"], ["text", "earum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.094899"], ["updated_at", "2022-03-10 18:16:21.094899"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "numquam"], ["text", "omnis"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.102829"], ["updated_at", "2022-03-10 18:16:21.102829"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "aliquid"], ["text", "odit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.112257"], ["updated_at", "2022-03-10 18:16:21.112257"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "similique"], ["text", "fugit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.120151"], ["updated_at", "2022-03-10 18:16:21.120151"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ea"], ["text", "amet"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.128399"], ["updated_at", "2022-03-10 18:16:21.128399"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/posts" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.3ms | Allocations: 1306)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sunt"], ["text", "aut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.163364"], ["updated_at", "2022-03-10 18:16:21.163364"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptatem"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.172208"], ["updated_at", "2022-03-10 18:16:21.172208"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "dolorem"], ["text", "pariatur"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.180372"], ["updated_at", "2022-03-10 18:16:21.180372"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "qui"], ["text", "totam"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.189796"], ["updated_at", "2022-03-10 18:16:21.189796"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "iure"], ["text", "ut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.197452"], ["updated_at", "2022-03-10 18:16:21.197452"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "dolorem"], ["text", "distinctio"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.205154"], ["updated_at", "2022-03-10 18:16:21.205154"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "itaque"], ["text", "ut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.213005"], ["updated_at", "2022-03-10 18:16:21.213005"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "qui"], ["text", "sequi"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.220561"], ["updated_at", "2022-03-10 18:16:21.220561"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "at"], ["text", "repellendus"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.228445"], ["updated_at", "2022-03-10 18:16:21.228445"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "laborum"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.235809"], ["updated_at", "2022-03-10 18:16:21.235809"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/posts/21" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 582)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "natus"], ["text", "provident"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.265732"], ["updated_at", "2022-03-10 18:16:21.265732"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (3.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "eveniet"], ["text", "quia"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.281910"], ["updated_at", "2022-03-10 18:16:21.281910"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ut"], ["text", "quibusdam"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.299501"], ["updated_at", "2022-03-10 18:16:21.299501"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ab"], ["text", "doloremque"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.308582"], ["updated_at", "2022-03-10 18:16:21.308582"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "modi"], ["text", "molestiae"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.316903"], ["updated_at", "2022-03-10 18:16:21.316903"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quidem"], ["text", "velit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.325688"], ["updated_at", "2022-03-10 18:16:21.325688"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et"], ["text", "laborum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.333673"], ["updated_at", "2022-03-10 18:16:21.333673"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "animi"], ["text", "quisquam"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.341225"], ["updated_at", "2022-03-10 18:16:21.341225"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et"], ["text", "reiciendis"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.348594"], ["updated_at", "2022-03-10 18:16:21.348594"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "esse"], ["text", "in"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.356581"], ["updated_at", "2022-03-10 18:16:21.356581"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/posts/100" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 292)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "excepturi"], ["text", "dolorem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.382306"], ["updated_at", "2022-03-10 18:16:21.382306"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "minima"], ["text", "aut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.390816"], ["updated_at", "2022-03-10 18:16:21.390816"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "tenetur"], ["text", "expedita"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.398104"], ["updated_at", "2022-03-10 18:16:21.398104"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "fuga"], ["text", "et"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.406869"], ["updated_at", "2022-03-10 18:16:21.406869"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ad"], ["text", "molestias"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.414229"], ["updated_at", "2022-03-10 18:16:21.414229"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "perspiciatis"], ["text", "quaerat"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.421393"], ["updated_at", "2022-03-10 18:16:21.421393"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "impedit"], ["text", "unde"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.428278"], ["updated_at", "2022-03-10 18:16:21.428278"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "odit"], ["text", "occaecati"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.435025"], ["updated_at", "2022-03-10 18:16:21.435025"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "enim"], ["text", "assumenda"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.441253"], ["updated_at", "2022-03-10 18:16:21.441253"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "consequatur"], ["text", "quia"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.448427"], ["updated_at", "2022-03-10 18:16:21.448427"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started GET "/posts/100" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 264)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nostrum"], ["text", "voluptatem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.472910"], ["updated_at", "2022-03-10 18:16:21.472910"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "mollitia"], ["text", "esse"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.479622"], ["updated_at", "2022-03-10 18:16:21.479622"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "aut"], ["text", "explicabo"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.486429"], ["updated_at", "2022-03-10 18:16:21.486429"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "accusamus"], ["text", "dolore"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.492906"], ["updated_at", "2022-03-10 18:16:21.492906"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "molestias"], ["text", "est"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.499886"], ["updated_at", "2022-03-10 18:16:21.499886"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "consequatur"], ["text", "ut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.506103"], ["updated_at", "2022-03-10 18:16:21.506103"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "asperiores"], ["text", "aut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.513300"], ["updated_at", "2022-03-10 18:16:21.513300"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et"], ["text", "autem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.520194"], ["updated_at", "2022-03-10 18:16:21.520194"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "tempore"], ["text", "sit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.527067"], ["updated_at", "2022-03-10 18:16:21.527067"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "molestiae"], ["text", "sapiente"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.533314"], ["updated_at", "2022-03-10 18:16:21.533314"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/posts" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"title"=>"Learn Elm", "text"=>"Learn Elm"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Learn Elm"], ["text", "Learn Elm"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.551481"], ["updated_at", "2022-03-10 18:16:21.551481"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 201 Created in 9ms (Views: 1.0ms | ActiveRecord: 2.2ms | Allocations: 858)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "in"], ["text", "nisi"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.569009"], ["updated_at", "2022-03-10 18:16:21.569009"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "qui"], ["text", "odio"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.575899"], ["updated_at", "2022-03-10 18:16:21.575899"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "eaque"], ["text", "est"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.582119"], ["updated_at", "2022-03-10 18:16:21.582119"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nobis"], ["text", "ea"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.590282"], ["updated_at", "2022-03-10 18:16:21.590282"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "molestiae"], ["text", "inventore"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.600042"], ["updated_at", "2022-03-10 18:16:21.600042"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "officia"], ["text", "ipsa"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.609155"], ["updated_at", "2022-03-10 18:16:21.609155"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "exercitationem"], ["text", "quia"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.616619"], ["updated_at", "2022-03-10 18:16:21.616619"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "non"], ["text", "delectus"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.623822"], ["updated_at", "2022-03-10 18:16:21.623822"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "perferendis"], ["text", "quis"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.630477"], ["updated_at", "2022-03-10 18:16:21.630477"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "debitis"], ["text", "facilis"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.636760"], ["updated_at", "2022-03-10 18:16:21.636760"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/posts" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"title"=>"Learn Elm", "text"=>"Learn Elm"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Learn Elm"], ["text", "Learn Elm"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.647321"], ["updated_at", "2022-03-10 18:16:21.647321"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 201 Created in 8ms (Views: 0.9ms | ActiveRecord: 2.3ms | Allocations: 657)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "illo"], ["text", "nostrum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.666384"], ["updated_at", "2022-03-10 18:16:21.666384"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "facere"], ["text", "rerum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.674253"], ["updated_at", "2022-03-10 18:16:21.674253"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (3.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "non"], ["text", "minima"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.681929"], ["updated_at", "2022-03-10 18:16:21.681929"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "pariatur"], ["text", "voluptatum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.694735"], ["updated_at", "2022-03-10 18:16:21.694735"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "aliquid"], ["text", "ea"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.703701"], ["updated_at", "2022-03-10 18:16:21.703701"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et"], ["text", "sed"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.713631"], ["updated_at", "2022-03-10 18:16:21.713631"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ut"], ["text", "blanditiis"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.721687"], ["updated_at", "2022-03-10 18:16:21.721687"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "eos"], ["text", "impedit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.729670"], ["updated_at", "2022-03-10 18:16:21.729670"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quas"], ["text", "voluptatibus"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.736755"], ["updated_at", "2022-03-10 18:16:21.736755"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "aut"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.744359"], ["updated_at", "2022-03-10 18:16:21.744359"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/posts" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"title"=>"Foobar"}
+Completed 422 Unprocessable Entity in 6ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 911)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nulla"], ["text", "doloremque"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.772362"], ["updated_at", "2022-03-10 18:16:21.772362"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "minus"], ["text", "eligendi"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.780571"], ["updated_at", "2022-03-10 18:16:21.780571"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sit"], ["text", "enim"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.787806"], ["updated_at", "2022-03-10 18:16:21.787806"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "dolorem"], ["text", "esse"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.797826"], ["updated_at", "2022-03-10 18:16:21.797826"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "non"], ["text", "ut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.805734"], ["updated_at", "2022-03-10 18:16:21.805734"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "itaque"], ["text", "vel"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.814956"], ["updated_at", "2022-03-10 18:16:21.814956"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptas"], ["text", "et"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.822764"], ["updated_at", "2022-03-10 18:16:21.822764"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ipsa"], ["text", "sunt"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.831386"], ["updated_at", "2022-03-10 18:16:21.831386"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (2.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "est"], ["text", "voluptas"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.838908"], ["updated_at", "2022-03-10 18:16:21.838908"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "delectus"], ["text", "ducimus"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.849727"], ["updated_at", "2022-03-10 18:16:21.849727"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started POST "/posts" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"title"=>"Foobar"}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 859)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "atque"], ["text", "asperiores"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.878024"], ["updated_at", "2022-03-10 18:16:21.878024"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "expedita"], ["text", "sit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.886939"], ["updated_at", "2022-03-10 18:16:21.886939"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "numquam"], ["text", "nulla"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.894620"], ["updated_at", "2022-03-10 18:16:21.894620"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quod"], ["text", "dolorum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.905754"], ["updated_at", "2022-03-10 18:16:21.905754"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quibusdam"], ["text", "animi"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.914041"], ["updated_at", "2022-03-10 18:16:21.914041"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ab"], ["text", "unde"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.923667"], ["updated_at", "2022-03-10 18:16:21.923667"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nihil"], ["text", "quia"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.931680"], ["updated_at", "2022-03-10 18:16:21.931680"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "tempore"], ["text", "praesentium"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.939152"], ["updated_at", "2022-03-10 18:16:21.939152"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "vitae"], ["text", "dolores"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.947191"], ["updated_at", "2022-03-10 18:16:21.947191"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "illo"], ["text", "ipsam"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.954511"], ["updated_at", "2022-03-10 18:16:21.954511"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PUT "/posts/93" for 127.0.0.1 at 2022-03-10 19:16:21 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"title"=>"Shopping", "id"=>"93"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: PostsController, action: update, request: #<ActionDispatch::Request:0x00007f3637115048>, params: {"title"=>"Shopping", "controller"=>"posts", "action"=>"update", "id"=>"93"} }[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Update (1.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["title", "Shopping"], ["updated_at", "2022-03-10 18:16:21.972601"], ["id", 93]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 204 No Content in 13ms (ActiveRecord: 3.9ms | Allocations: 797)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "accusamus"], ["text", "nostrum"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:21.993333"], ["updated_at", "2022-03-10 18:16:21.993333"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "velit"], ["text", "impedit"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.003411"], ["updated_at", "2022-03-10 18:16:22.003411"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ut"], ["text", "iure"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.016831"], ["updated_at", "2022-03-10 18:16:22.016831"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptatum"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.026900"], ["updated_at", "2022-03-10 18:16:22.026900"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ratione"], ["text", "eveniet"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.034983"], ["updated_at", "2022-03-10 18:16:22.034983"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quisquam"], ["text", "dolorem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.044338"], ["updated_at", "2022-03-10 18:16:22.044338"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "libero"], ["text", "quam"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.052832"], ["updated_at", "2022-03-10 18:16:22.052832"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "rem"], ["text", "est"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.060849"], ["updated_at", "2022-03-10 18:16:22.060849"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptas"], ["text", "atque"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.068244"], ["updated_at", "2022-03-10 18:16:22.068244"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "doloremque"], ["text", "similique"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.076762"], ["updated_at", "2022-03-10 18:16:22.076762"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started PUT "/posts/103" for 127.0.0.1 at 2022-03-10 19:16:22 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"title"=>"Shopping", "id"=>"103"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: PostsController, action: update, request: #<ActionDispatch::Request:0x00007f36370ba990>, params: {"title"=>"Shopping", "controller"=>"posts", "action"=>"update", "id"=>"103"} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Update (1.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["title", "Shopping"], ["updated_at", "2022-03-10 18:16:22.090409"], ["id", 103]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 204 No Content in 11ms (ActiveRecord: 3.6ms | Allocations: 633)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sunt"], ["text", "voluptatem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.109375"], ["updated_at", "2022-03-10 18:16:22.109375"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quo"], ["text", "exercitationem"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.119818"], ["updated_at", "2022-03-10 18:16:22.119818"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "minima"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.129637"], ["updated_at", "2022-03-10 18:16:22.129637"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ut"], ["text", "iure"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.138422"], ["updated_at", "2022-03-10 18:16:22.138422"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sint"], ["text", "aut"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.145903"], ["updated_at", "2022-03-10 18:16:22.145903"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "repellat"], ["text", "eaque"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.154331"], ["updated_at", "2022-03-10 18:16:22.154331"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ipsa"], ["text", "in"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.164671"], ["updated_at", "2022-03-10 18:16:22.164671"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quos"], ["text", "enim"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.172440"], ["updated_at", "2022-03-10 18:16:22.172440"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "natus"], ["text", "voluptas"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.180505"], ["updated_at", "2022-03-10 18:16:22.180505"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "at"], ["text", "qui"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-10 18:16:22.188344"], ["updated_at", "2022-03-10 18:16:22.188344"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Started DELETE "/posts/113" for 127.0.0.1 at 2022-03-10 19:16:22 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mPost Destroy (1.0ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 113]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Completed 204 No Content in 8ms (ActiveRecord: 3.4ms | Allocations: 448)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
