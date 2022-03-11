@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-
+RSpec.describe 'Posts', type: :request do
   # initialize test data
   let(:user) { create(:user) }
   let!(:posts) { create_list(:post, 10, authorid: user.id) }
@@ -9,9 +8,9 @@ RSpec.describe "Posts", type: :request do
   # authorize request
   let(:headers) { valid_headers }
 
-  describe "GET /posts" do
-     # make HTTP get request before each example
-    before { get '/posts', params: {}, headers: headers  }
+  describe 'GET /posts' do
+    # make HTTP get request before each example
+    before { get '/posts', params: {}, headers: }
 
     it 'returns posts' do
       # Note `json` is a custom helper to parse JSON responses
@@ -22,11 +21,10 @@ RSpec.describe "Posts", type: :request do
     it 'returns status code 200' do
       expect(response).to have_http_status(200)
     end
-
   end
   # Test suite for GET /posts/:id
   describe 'GET /posts/:id' do
-    before { get "/posts/#{post_id}", params: {}, headers: headers }
+    before { get "/posts/#{post_id}", params: {}, headers: }
 
     context 'when the record exists' do
       it 'returns status code 200' do
@@ -57,7 +55,7 @@ RSpec.describe "Posts", type: :request do
 
     context 'when the request is invalid' do
       let(:invalid_attributes) { { title: nil }.to_json }
-      before { post '/posts', params: invalid_attributes, headers: headers }
+      before { post '/posts', params: invalid_attributes, headers: }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -75,7 +73,7 @@ RSpec.describe "Posts", type: :request do
     let(:valid_attributes) { { title: 'Shopping' }.to_json }
 
     context 'when the record exists' do
-      before { put "/posts/#{post_id}", params: valid_attributes, headers: headers }
+      before { put "/posts/#{post_id}", params: valid_attributes, headers: }
 
       it 'updates the record' do
         expect(response.body).to be_empty
@@ -89,7 +87,7 @@ RSpec.describe "Posts", type: :request do
 
   # Test suite for DELETE /posts/:id
   describe 'DELETE /posts/:id' do
-    before { delete "/posts/#{post_id}", params: {}, headers: headers }
+    before { delete "/posts/#{post_id}", params: {}, headers: }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)

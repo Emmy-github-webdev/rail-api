@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Comments", type: :request do
-
+RSpec.describe 'Comments', type: :request do
   let(:user) { create(:user) }
   let!(:post) { create(:post, authorid: user.id) }
   let!(:comments) { create_list(:comment, 20, post_id: post.id, user_id: user.id) }
@@ -11,7 +10,7 @@ RSpec.describe "Comments", type: :request do
 
   # Test suite for GET /posts/:post_id/comments
   describe 'GET users/user_id/posts/:post_id/comments' do
-    before { get "/users/#{user_id}/posts/#{post_id}/comments", params: {}, headers: headers }
+    before { get "/users/#{user_id}/posts/#{post_id}/comments", params: {}, headers: }
 
     context 'when post exists' do
       it 'returns status code 200' do
@@ -38,7 +37,7 @@ RSpec.describe "Comments", type: :request do
 
   # Test suite for GET /posts/:post_id/comments/:id
   describe 'GET /posts/:post_id/comments/:id' do
-    before { get "/posts/#{post_id}/comments/#{id}", params: {}, headers: headers }
+    before { get "/posts/#{post_id}/comments/#{id}", params: {}, headers: }
 
     context 'when todo comment exists' do
       it 'returns status code 200' do
@@ -69,7 +68,7 @@ RSpec.describe "Comments", type: :request do
 
     context 'when request attributes are valid' do
       before do
-        post "/posts/#{post_id}/comments", params: valid_attributes, headers: headers
+        post "/posts/#{post_id}/comments", params: valid_attributes, headers:
       end
 
       it 'returns status code 201' do
@@ -78,7 +77,7 @@ RSpec.describe "Comments", type: :request do
     end
 
     context 'when an invalid request' do
-      before { post "/posts/#{post_id}/comments", params: {}, headers: headers }
+      before { post "/posts/#{post_id}/comments", params: {}, headers: }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -95,7 +94,7 @@ RSpec.describe "Comments", type: :request do
     let(:valid_attributes) { { text: 'Mozart' }.to_json }
 
     before do
-      put "/posts/#{post_id}/comments/#{id}", params: valid_attributes, headers: headers
+      put "/posts/#{post_id}/comments/#{id}", params: valid_attributes, headers:
     end
 
     context 'when comment exists' do
@@ -124,7 +123,7 @@ RSpec.describe "Comments", type: :request do
 
   # Test suite for DELETE /posts/:id
   describe 'DELETE /posts/:id' do
-    before { delete "posts/#{post_id}/comments/#{id}", params: {}, headers: headers }
+    before { delete "posts/#{post_id}/comments/#{id}", params: {}, headers: }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)

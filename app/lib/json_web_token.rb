@@ -19,4 +19,3 @@ class JsonWebToken
     raise ExceptionHandler::InvalidToken, e.message
   end
 end
-

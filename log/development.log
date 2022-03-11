@@ -286,3 +286,805 @@ Processing by PostsController#index as HTML
 Completed 422 Unprocessable Entity in 24ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 978)
 
 
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "post_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "John Doe"], ["email", "jdoe@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-03-11 12:27:05.968138"], ["updated_at", "2022-03-11 12:27:05.968138"], ["post_id", nil]]
+  [1m[36mTRANSACTION (44.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "post_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emmanuel Ogah"], ["email", "eogah@example.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-03-11 12:28:00.445143"], ["updated_at", "2022-03-11 12:28:00.445143"], ["post_id", nil]]
+  [1m[36mTRANSACTION (39.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (51.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPost Create (3.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at", "authorid", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Post API"], ["text", "Post API built with Ruby on Rails"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-11 12:33:02.697493"], ["updated_at", "2022-03-11 12:33:02.697493"], ["authorid", nil], ["user_id", 2]]
+  [1m[36mTRANSACTION (97.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 13:33:16 +0100
+Processing by PostsController#index as HTML
+Completed 422 Unprocessable Entity in 5ms (Views: 0.7ms | Allocations: 628)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 13:33:25 +0100
+Processing by PostsController#index as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | Allocations: 88)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 13:34:05 +0100
+Processing by PostsController#index as HTML
+Completed 422 Unprocessable Entity in 6ms (Views: 1.1ms | Allocations: 610)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at", "authorid", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Microverse"], ["text", "Microverse is an online training school"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-11 12:37:09.086568"], ["updated_at", "2022-03-11 12:37:09.086568"], ["authorid", nil], ["user_id", 1]]
+  [1m[36mTRANSACTION (56.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Create (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "text", "commentCounter", "likeCounter", "created_at", "updated_at", "authorid", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Time Block"], ["text", "Time block is a time mangement technigue"], ["commentCounter", nil], ["likeCounter", nil], ["created_at", "2022-03-11 12:38:34.797038"], ["updated_at", "2022-03-11 12:38:34.797038"], ["authorid", nil], ["user_id", 1]]
+  [1m[36mTRANSACTION (43.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (3.5ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Wonderfull post api so far!"], ["post_id", 1], ["user_id", 1], ["created_at", "2022-03-11 12:41:08.735224"], ["updated_at", "2022-03-11 12:41:08.735224"]]
+  [1m[36mTRANSACTION (33.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (2.2ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Nice one!"], ["post_id", 1], ["user_id", 2], ["created_at", "2022-03-11 12:42:34.036713"], ["updated_at", "2022-03-11 12:42:34.036713"]]
+  [1m[36mTRANSACTION (56.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (1.7ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Time blocker is a great approach"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 12:43:34.496302"], ["updated_at", "2022-03-11 12:43:34.496302"]]
+  [1m[36mTRANSACTION (54.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2022-03-11 13:47:44 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"jdeo@example.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jdeo@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007ff66cef3890>, params: {"email"=>"jdeo@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdeo@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007ff66cef3890>, params: {"email"=>"jdeo@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdeo@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jdeo@example.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 119ms (Views: 0.7ms | ActiveRecord: 29.2ms | Allocations: 9045)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for 127.0.0.1 at 2022-03-11 13:49:06 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007ff66ce5d8e0>, params: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007ff66ce5d8e0>, params: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jdoe@example.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jdoe@example.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1553ms (Views: 0.5ms | ActiveRecord: 10.3ms | Allocations: 10552)
+
+
+Started GET "/auth/posts" for 127.0.0.1 at 2022-03-11 13:51:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/auth/posts"):
+  
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 13:52:02 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 6.9ms | Allocations: 6093)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 13:57:53 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 23.4ms | Allocations: 9898)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 13:59:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 20.1ms | Allocations: 29457)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started POST "/auth/login" for 127.0.0.1 at 2022-03-11 13:59:45 +0100
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007f9241addec0>, params: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :authentication. Context: { controller: AuthenticationController, action: authenticate, request: #<ActionDispatch::Request:0x00007f9241addec0>, params: {"email"=>"jdoe@example.com", "password"=>"[FILTERED]", "controller"=>"authentication", "action"=>"authenticate", "authentication"=>{"email"=>"jdoe@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jdoe@example.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jdoe@example.com"], ["LIMIT", 1]]
+  ↳ app/auth/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1439ms (Views: 0.8ms | ActiveRecord: 2.0ms | Allocations: 2234)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 14:00:54 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 88ms (Views: 33.0ms | ActiveRecord: 22.0ms | Allocations: 13147)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-03-11 14:22:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 77ms (Views: 7.0ms | ActiveRecord: 17.0ms | Allocations: 23091)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-03-11 14:23:46 +0100
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 17.9ms | Allocations: 4996)
+
+
+  
+NameError (undefined local variable or method `posts' for #<UsersController:0x0000000000f2d0>
+
+    @users = posts.current_user
+             ^^^^^):
+  
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/users" for 127.0.0.1 at 2022-03-11 14:24:16 +0100
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 16.4ms | Allocations: 4912)
+
+
+  
+NameError (undefined local variable or method `post' for #<UsersController:0x00000000014078>
+
+    @users = post.current_user
+             ^^^^):
+  
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:24:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (38.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (65.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (110.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 946ms (Views: 20.5ms | ActiveRecord: 383.1ms | Allocations: 32718)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:24:45 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 225)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:25:01 +0100
+Processing by PostsController#index as HTML
+Completed 422 Unprocessable Entity in 101ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1890)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-03-11 15:25:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:25:30 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 22ms (Views: 11.5ms | ActiveRecord: 2.3ms | Allocations: 1898)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:26:28 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 9.6ms | Allocations: 10252)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:27:57 +0100
+Processing by PostsController#index as */*
+  Parameters: {"user_id"=>"1", "post"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.2ms | Allocations: 5178)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:30:33 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 53ms (Views: 11.5ms | ActiveRecord: 17.1ms | Allocations: 8297)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:31:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"welcome"=>{}}
+  Rendering /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.0ms | Allocations: 807)
+Completed 200 OK in 172ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 6529)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:31:31 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.9ms | Allocations: 516)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 1516)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 15:31:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/post" for 127.0.0.1 at 2022-03-11 15:32:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post"):
+  
+Started GET "/post" for 127.0.0.1 at 2022-03-11 15:33:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/post"):
+  
+Started GET "/posts" for 127.0.0.1 at 2022-03-11 15:33:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/user/1/posts" for 127.0.0.1 at 2022-03-11 15:34:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user/1/posts"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:34:58 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/emmy/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 33)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/user/1/posts" for 127.0.0.1 at 2022-03-11 15:35:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user/1/posts"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-03-11 15:35:49 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:36:02 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 422 Unprocessable Entity in 42ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 753)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:36:31 +0100
+Processing by PostsController#index as */*
+  Parameters: {"user_id"=>"1", "post"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 18.8ms | Allocations: 16642)
+
+
+  
+NoMethodError (undefined method `posts' for #<User id: 1, name: "John Doe", email: "jdoe@example.com", password_digest: [FILTERED], created_at: "2022-03-11 12:27:05.968138000 +0000", updated_at: "2022-03-11 12:27:05.968138000 +0000", post_id: nil>
+Did you mean?  post
+               post=):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:37:05 +0100
+Processing by PostsController#index as */*
+  Parameters: {"user_id"=>"1", "post"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 483ms (Views: 217.2ms | ActiveRecord: 18.3ms | Allocations: 16989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:38:49 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 52ms (Views: 11.7ms | ActiveRecord: 16.1ms | Allocations: 8293)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:52:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PostController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  PostsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:53:11 +0100
+Processing by PostsController#postbyauser as */*
+  Parameters: {"user_id"=>"1", "post"=>{}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 446ms (Views: 53.5ms | ActiveRecord: 39.7ms | Allocations: 36267)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:53:41 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 27ms (Views: 9.0ms | ActiveRecord: 4.3ms | Allocations: 1883)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-03-11 15:53:56 +0100
+Processing by PostsController#postbyauser as */*
+  Parameters: {"user_id"=>"1", "post"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 29ms (Views: 15.8ms | ActiveRecord: 3.0ms | Allocations: 1718)
+
+
+Started GET "/users/2/posts" for 127.0.0.1 at 2022-03-11 15:54:11 +0100
+Processing by PostsController#postbyauser as */*
+  Parameters: {"user_id"=>"2", "post"=>{}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 27ms (Views: 8.8ms | ActiveRecord: 8.6ms | Allocations: 1664)
+
+
+Started GET "/users/2/posts" for 127.0.0.1 at 2022-03-11 15:54:34 +0100
+Processing by PostsController#postbyauser as */*
+  Parameters: {"user_id"=>"2", "post"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 2.2ms | Allocations: 1678)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:57:18 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 15.0ms | Allocations: 6345)
+
+
+  
+NoMethodError (undefined method `posts' for nil:NilClass
+
+    @posts = @comments.posts
+                      ^^^^^^):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:57:37 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 20.3ms | Allocations: 6294)
+
+
+  
+NoMethodError (undefined method `post' for nil:NilClass
+
+    @posts = @comments.post
+                      ^^^^^):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:59:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 21.2ms | Allocations: 25514)
+
+
+  
+NoMethodError (undefined method `posts' for nil:NilClass
+
+    @posts = @user.posts.includes(:comments)
+                  ^^^^^^):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 15:59:46 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 16.8ms | Allocations: 6337)
+
+
+  
+NoMethodError (undefined method `post' for nil:NilClass
+
+    @posts = @user.post.includes(:comments)
+                  ^^^^^):
+  
+app/controllers/posts_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2022-03-11 16:01:05 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 59ms (Views: 23.7ms | ActiveRecord: 20.6ms | Allocations: 13301)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 16:02:08 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/concerns/response.rb:3:in `json_response'
+Completed 200 OK in 106ms (Views: 20.6ms | ActiveRecord: 22.4ms | Allocations: 10929)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 16:03:57 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mComment Load (56.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 15.9ms | Allocations: 13575)
+
+
+  [1m[36mCACHE Comment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `to_i' for #<ActiveRecord::Relation [#<Comment id: 1, text: "Wonderfull post api so far!", post_id: 1, user_id: 1, created_at: "2022-03-11 12:41:08.735224000 +0000", updated_at: "2022-03-11 12:41:08.735224000 +0000">, #<Comment id: 2, text: "Nice one!", post_id: 1, user_id: 2, created_at: "2022-03-11 12:42:34.036713000 +0000", updated_at: "2022-03-11 12:42:34.036713000 +0000">, #<Comment id: 3, text: "Time blocker is a great approach", post_id: 3, user_id: 2, created_at: "2022-03-11 12:43:34.496302000 +0000", updated_at: "2022-03-11 12:43:34.496302000 +0000">]>
+Did you mean?  to_s
+               to_h
+               to_a):
+  
+app/controllers/concerns/response.rb:3:in `json_response'
+app/controllers/posts_controller.rb:8:in `index'
+  [1m[36mCACHE Comment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Started GET "/" for 127.0.0.1 at 2022-03-11 16:06:26 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 18.8ms | Allocations: 10869)
+
+
+  [1m[36mCACHE Post Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `comment' for #<ActiveRecord::Relation [#<Post id: 1, title: "Post API", text: "Post API built with Ruby on Rails", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:33:02.697493000 +0000", updated_at: "2022-03-11 12:33:02.697493000 +0000", authorid: nil, user_id: 2>, #<Post id: 2, title: "Microverse", text: "Microverse is an online training school", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:37:09.086568000 +0000", updated_at: "2022-03-11 12:37:09.086568000 +0000", authorid: nil, user_id: 1>, #<Post id: 3, title: "Time Block", text: "Time block is a time mangement technigue", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:38:34.797038000 +0000", updated_at: "2022-03-11 12:38:34.797038000 +0000", authorid: nil, user_id: 1>]>):
+  
+app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2022-03-11 16:06:52 +0100
+Processing by PostsController#index as */*
+  Parameters: {"post"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 10.4ms | Allocations: 10867)
+
+
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `comments' for #<ActiveRecord::Relation [#<Post id: 1, title: "Post API", text: "Post API built with Ruby on Rails", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:33:02.697493000 +0000", updated_at: "2022-03-11 12:33:02.697493000 +0000", authorid: nil, user_id: 2>, #<Post id: 2, title: "Microverse", text: "Microverse is an online training school", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:37:09.086568000 +0000", updated_at: "2022-03-11 12:37:09.086568000 +0000", authorid: nil, user_id: 1>, #<Post id: 3, title: "Time Block", text: "Time block is a time mangement technigue", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:38:34.797038000 +0000", updated_at: "2022-03-11 12:38:34.797038000 +0000", authorid: nil, user_id: 1>]>):
+  
+app/controllers/posts_controller.rb:7:in `index'
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/comments" for 127.0.0.1 at 2022-03-11 16:21:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as */*
+  Parameters: {"comment"=>{}}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+Completed 404 Not Found in 117ms (Views: 1.8ms | ActiveRecord: 33.6ms | Allocations: 15313)
+
+
+Started GET "/users/1/posts/2/comments" for 127.0.0.1 at 2022-03-11 16:23:40 +0100
+Processing by CommentsController#index as */*
+  Parameters: {"user_id"=>"1", "post_id"=>"2", "comment"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:40:in `set_post'
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 29.3ms | Allocations: 33201)
+
+
+  
+NoMethodError (undefined method `comments' for #<Post id: 2, title: "Microverse", text: "Microverse is an online training school", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:37:09.086568000 +0000", updated_at: "2022-03-11 12:37:09.086568000 +0000", authorid: nil, user_id: 1>
+Did you mean?  comment
+               comment=):
+  
+app/controllers/comments_controller.rb:7:in `index'
+Started GET "/users/1/posts/2/comments" for 127.0.0.1 at 2022-03-11 16:24:02 +0100
+Processing by CommentsController#index as */*
+  Parameters: {"user_id"=>"1", "post_id"=>"2", "comment"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:40:in `set_post'
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 20.1ms | Allocations: 15777)
+
+
+  
+NoMethodError (undefined method `comments' for #<Post id: 2, title: "Microverse", text: "Microverse is an online training school", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:37:09.086568000 +0000", updated_at: "2022-03-11 12:37:09.086568000 +0000", authorid: nil, user_id: 1>
+Did you mean?  comment
+               comment=):
+  
+app/controllers/comments_controller.rb:7:in `index'
+Started GET "/users/1/posts/2/comments" for 127.0.0.1 at 2022-03-11 16:24:19 +0100
+  
+ActionController::RoutingError (uninitialized constant CommentController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CommentsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/users/1/posts/2/comments" for 127.0.0.1 at 2022-03-11 16:24:55 +0100
+Processing by CommentsController#index as */*
+  Parameters: {"user_id"=>"1", "post_id"=>"2", "comment"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:40:in `set_post'
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 18.5ms | Allocations: 15678)
+
+
+  
+NoMethodError (undefined method `comments' for #<Post id: 2, title: "Microverse", text: "Microverse is an online training school", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:37:09.086568000 +0000", updated_at: "2022-03-11 12:37:09.086568000 +0000", authorid: nil, user_id: 1>
+Did you mean?  comment
+               comment=):
+  
+app/controllers/comments_controller.rb:7:in `index'
+Started GET "/users/1/posts/1/comments" for 127.0.0.1 at 2022-03-11 16:26:19 +0100
+Processing by CommentsController#index as */*
+  Parameters: {"user_id"=>"1", "post_id"=>"1", "comment"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:40:in `set_post'
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 30.0ms | Allocations: 15676)
+
+
+  
+NoMethodError (undefined method `comments' for #<Post id: 1, title: "Post API", text: "Post API built with Ruby on Rails", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:33:02.697493000 +0000", updated_at: "2022-03-11 12:33:02.697493000 +0000", authorid: nil, user_id: 2>
+Did you mean?  comment
+               comment=):
+  
+app/controllers/comments_controller.rb:7:in `index'
+Started GET "/users/1/posts/1/comments" for 127.0.0.1 at 2022-03-11 16:26:49 +0100
+Processing by CommentsController#index as */*
+  Parameters: {"user_id"=>"1", "post_id"=>"1", "comment"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/auth/authorize_api_request.rb:20:in `user'
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:40:in `set_post'
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 22.8ms | Allocations: 15687)
+
+
+  
+NoMethodError (undefined method `comments' for #<Post id: 1, title: "Post API", text: "Post API built with Ruby on Rails", commentCounter: nil, likeCounter: nil, created_at: "2022-03-11 12:33:02.697493000 +0000", updated_at: "2022-03-11 12:33:02.697493000 +0000", authorid: nil, user_id: 2>
+Did you mean?  comment
+               comment=):
+  
+app/controllers/comments_controller.rb:7:in `index'
+Started GET "/users/1/posts/1/comments" for 127.0.0.1 at 2022-03-11 16:34:38 +0100
+  
+ArgumentError (Before process_action callback :authorize! has not been defined):
+  
+app/controllers/comments_controller.rb:4:in `<class:CommentsController>'
+app/controllers/comments_controller.rb:1:in `<main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4005413859020435610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddComentsToPost (20220311153959)
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (209.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "comments" text[] DEFAULT '{}'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220311153959"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (37.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(4005413859020435610)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (70.7ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Great!"], ["post_id", 3], ["user_id", 1], ["created_at", "2022-03-11 15:47:13.515947"], ["updated_at", "2022-03-11 15:47:13.515947"]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (41.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (4.7ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Comment test"], ["post_id", 3], ["user_id", 1], ["created_at", "2022-03-11 15:53:59.500705"], ["updated_at", "2022-03-11 15:53:59.500705"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (3.1ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 15:58:02.638035"], ["updated_at", "2022-03-11 15:58:02.638035"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (2.5ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 15:59:39.623613"], ["updated_at", "2022-03-11 15:59:39.623613"]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (3.1ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 1], ["created_at", "2022-03-11 16:02:28.924475"], ["updated_at", "2022-03-11 16:02:28.924475"]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (1.8ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 16:05:03.030412"], ["updated_at", "2022-03-11 16:05:03.030412"]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (3.6ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 16:08:12.938608"], ["updated_at", "2022-03-11 16:08:12.938608"]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (2.7ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 16:12:44.914819"], ["updated_at", "2022-03-11 16:12:44.914819"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (4.5ms)[0m  [1m[32mINSERT INTO "comments" ("text", "post_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "text"], ["post_id", 3], ["user_id", 2], ["created_at", "2022-03-11 16:14:15.649472"], ["updated_at", "2022-03-11 16:14:15.649472"]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Update (1.9ms)[0m  [1m[33mUPDATE "posts" SET "commentCounter" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["commentCounter", 0], ["updated_at", "2022-03-11 16:14:15.682088"], ["id", 3]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
