@@ -65,7 +65,7 @@ RSpec.describe "Posts", type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Text can't be blank/)
+          .to match(/Validation failed: Title can't be blank, Text can't be blank/)
       end
     end
   end

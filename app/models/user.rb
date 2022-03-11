@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :comment, dependent: :destroy
   # encrypt password
   has_secure_password
 
